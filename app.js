@@ -1,5 +1,6 @@
+//PRIMERA PREENTREGA
 
-let edad = prompt ("Bienvenido a WatchArg, necesitamos verificar su edad para continuar") 
+/*let edad = prompt ("Bienvenido a WatchArg, necesitamos verificar su edad para continuar") 
 if (edad >= 18) {
 reso = "Gracias por su información, continue por favor";}
 else {(edad <= 18) 
@@ -69,4 +70,116 @@ const saludo = registro(usuario, contrasena)
 
 alert(saludo)
  
-alert("Gracias por visitarnos!")
+alert("Gracias por visitarnos!")*/
+
+
+/*
+const carrito =[
+  {nombre:"Smartwatch Samsung", precio:12000},
+  {nombre:"Smartwatch Motorola", precio:15000},
+  {nombre:"Smartwatch West", precio:20000},
+]
+*/
+
+//ACA COMIENZA LA SEGUNDA PREENTREGA
+let edad = prompt ("Bienvenido a WatchArg, necesitamos verificar su edad para continuar") 
+if (edad >= 18) {
+reso = "Gracias por su información, continue por favor";}
+else {(edad <= 18) 
+   reso = "Es menor de edad, algunas imagenes de Smartwatch estarán restringidas, continue";}
+   alert(reso)
+
+  //Array con objetos
+const productos = [
+  { modelo: "Apple Watch Series 6", precio: 4000 },
+  { modelo: "Samsung Galaxy Watch Active2", precio: 2000 },
+  { modelo: "Fitbit Versa 3", precio: 17000 },
+  { modelo: "Garmin Forerunner 945", precio: 5000 },
+];
+  const envio = [
+    { Tipo: "Full", precio: 700 },
+    { Tipo: "Común", precio: 500 },
+  ];
+ 
+//Metodos
+productos.map (productos => productos.modelo)
+const tiposEnvio = envio.map(envio => envio.Tipo);
+
+//Array vacios
+const carrito = []
+const enviofinal = [];
+
+//Interacción con usuarios, bucles y metodos
+let seleccion = prompt("Elige el Smartwatch que desee:\n\n" +
+  "1. Apple Watch Series 6\n" +
+  "2. Samsung Galaxy Watch Active2\n" +
+  "3. Fitbit Versa 3\n" +
+  "4. Garmin Forerunner 945\n")
+
+  seleccion = parseInt(seleccion) ; 
+
+  if (seleccion >= 1 && seleccion <= productos.length) {
+    const productoSeleccionado = productos[seleccion - 1].modelo;
+    carrito.push(productoSeleccionado);
+  
+    alert("El producto que elegiste para comprar es: " + productoSeleccionado);
+  } else {
+    alert("Selección inválida");
+  }
+  
+  
+  let tipodeenvío = prompt("Elige el tipo de envío:\n\n" +
+    "1. Envío Full \n" +
+    "2. Envío Común \n");
+  
+  tipodeenvío = (tipodeenvío);
+  
+  
+  
+  if (tipodeenvío >= 1 && tipodeenvío <= tiposEnvio.length) {
+    const envioseleccionado = tiposEnvio[tipodeenvío - 1];
+    enviofinal.push(envioseleccionado);
+  
+    alert("El tipo de envío seleccionado es: " + envioseleccionado);
+  } else {
+    alert("El tipo de envío es Envío Full por defecto");
+  }
+  
+  
+//Función
+
+let envioseleccionado = carrito;
+let productoSeleccionado = enviofinal; 
+
+
+let MontoFinal = prompt("desea ver el monto final \n\n "+
+"1. Si \n "+
+"2. No \n");
+
+MontoFinal = parseInt(MontoFinal);
+
+if (MontoFinal === 1) {
+  const calcularTotal = (envioseleccionado, productoSeleccionado) => {
+    return envioseleccionado + productoSeleccionado;
+  };
+  alert("El carrito posee: " + envioseleccionado + " + " + productoSeleccionado);}
+  else{
+    alert("gracias por tu visita, el link del carrito ha sido enviado al mail")
+  }
+ 
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
